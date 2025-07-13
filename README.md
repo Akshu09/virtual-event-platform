@@ -25,42 +25,38 @@ This is a Node.js + Express backend for a Virtual Event Platform that allows:
 ## Folder Structure
 
 virtual-event-platform/
-
-     backend/
-        index.js # Entry point
-        controllers/ 
-            # Auth & Event logic
-        routes/ 
-            # API route definitions
-        middleware/ 
-            # JWT auth middleware
-        utils/
-             # Email sending utility
-        data/store.js 
-            # In-memory data store
-        .env 
-            # Environment variables
-        package.json
-        README.md
+│
+├── backend/
+│ ├── index.js # Entry point
+│ ├── controllers/ # Auth & Event logic
+│ ├── routes/ # API route definitions
+│ ├── middleware/ # JWT auth middleware
+│ ├── utils/ # Email sending utility
+│ └── data/store.js # In-memory data store
+│
+├── .env # Environment variables
+├── package.json
+└── README.md
 
 
 ---
 
-##  Setup Instructions
+## Setup Instructions
 
 1. **Clone the repository:**
 
    bash
    git clone https://github.com/yourusername/virtual-event-platform.git
    cd virtual-event-platform
-2. Install dependencies: npm install
+2. Install dependencies:
+npm install
 
 3. Create .env file:
 
 PORT=3000
-JWT_SECRET=jwt_secret_here
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_app_password_here
+    JWT_SECRET=jwt_secret_here
+    EMAIL_USER=your_email@gmail.com
+    EMAIL_PASS=your_app_password_here
 
 4. Run the server: npm run dev
    The API will be running at: http://localhost:3000
@@ -83,7 +79,6 @@ No test cases included yet.
 You can manually test APIs using tools like Postman or Thunder Client.
 
 
- Notes
-This project uses in-memory storage — data will reset on server restart.
-
-Easily extendable to use MongoDB or PostgreSQL in future versions.
+Notes
+1. This project uses in-memory storage — data will reset on server restart.
+2. Easily extendable to use MongoDB or PostgreSQL in future versions.
