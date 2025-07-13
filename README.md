@@ -26,17 +26,40 @@ This is a Node.js + Express backend for a Virtual Event Platform that allows:
 
 virtual-event-platform/
 
-── backend/
-    ── index.js # Entry point
- ── controllers/ # Auth & Event logic
- ── routes/ # API route definitions
- ── middleware/ # JWT auth middleware
- ── utils/ # Email sending utility
- ── data/store.js # In-memory data store
-
-── .env # Environment variables
-── package.json
-── README.md
+─  backend/
+    
+    
+    ─  index.js # Entry point
+    
+   
+    ─  controllers/ # Auth & Event logic
+    
+    
+    ─ routes/ # API route definitions
+    
+    
+    
+    
+    
+    ─ middleware/ # JWT auth middleware
+    
+    
+    
+    ─ utils/ # Email sending utility
+    
+    
+    
+    ─ data/store.js # In-memory data store
+    
+    
+    
+    ─ .env # Environment variables  
+    
+    
+    ─ package.json    
+    
+    
+    ─ README.md
 
 
 ---
@@ -46,16 +69,23 @@ virtual-event-platform/
 1. **Clone the repository:**
 
    bash
-   git clone https://github.com/yourusername/virtual-event-platform.git
+   git clone https://github.com/Akshu09/virtual-event-platform.git
    cd virtual-event-platform
 2. Install dependencies:
 npm install
 
 3. Create .env file:
 
-PORT=3000
+    PORT=3000
+    
+    
+    
     JWT_SECRET=jwt_secret_here
+    
+    
     EMAIL_USER=your_email@gmail.com
+    
+    
     EMAIL_PASS=your_app_password_here
 
 4. Run the server: npm run dev
@@ -63,20 +93,36 @@ PORT=3000
 
 5. API Endpoints
 
-Method   	    Endpoint	                Description	                             Auth  Required
+Method    	                Endpoint	                            Description	                                 Auth  Required
 
 
-POST	        /api/auth/register	        Register user/organizer	                    not
+POST	                    /api/auth/register	                    Register user/organizer	                        not required
 
 
-POST	        /api/auth/login	            Login + JWT token	                        not
+POST	                    /api/auth/login	                        Login + JWT token	                            not required
 
 
-GET	            /api/events	                List all events	                            not
-POST	        /api/events	                Create an event (organizer only)	        yes
-PUT	            /api/events/:id	            Update event (organizer only)	            yes
-DELETE	        /api/events/:id	            Delete event (organizer only)	            yes
-POST	        /api/events/:id/register    Register for an event (user)	            yes
+GET	                        /api/events	                            List all events	                                not required
+
+
+
+
+POST	                    /api/events	                            Create an event (organizer only)	            yes
+
+
+
+
+PUT	                        /api/events/:id	                        Update event (organizer only)	                yes
+
+
+
+
+DELETE	                    /api/events/:id	                        Delete event (organizer only)	                yes
+
+
+
+
+POST	                    /api/events/:id/register                Register for an event (user)	                yes
 
 
 
