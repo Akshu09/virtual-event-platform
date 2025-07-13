@@ -25,18 +25,18 @@ This is a Node.js + Express backend for a Virtual Event Platform that allows:
 ## Folder Structure
 
 virtual-event-platform/
-│
-├── backend/
-│ ├── index.js # Entry point
-│ ├── controllers/ # Auth & Event logic
-│ ├── routes/ # API route definitions
-│ ├── middleware/ # JWT auth middleware
-│ ├── utils/ # Email sending utility
-│ └── data/store.js # In-memory data store
-│
-├── .env # Environment variables
-├── package.json
-└── README.md
+
+── backend/
+    ── index.js # Entry point
+ ── controllers/ # Auth & Event logic
+ ── routes/ # API route definitions
+ ── middleware/ # JWT auth middleware
+ ── utils/ # Email sending utility
+ ── data/store.js # In-memory data store
+
+── .env # Environment variables
+── package.json
+── README.md
 
 
 ---
@@ -64,8 +64,14 @@ PORT=3000
 5. API Endpoints
 
 Method   	    Endpoint	                Description	                             Auth  Required
+
+
 POST	        /api/auth/register	        Register user/organizer	                    not
+
+
 POST	        /api/auth/login	            Login + JWT token	                        not
+
+
 GET	            /api/events	                List all events	                            not
 POST	        /api/events	                Create an event (organizer only)	        yes
 PUT	            /api/events/:id	            Update event (organizer only)	            yes
